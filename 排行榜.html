@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title> </title>
+    <script src="js/JQ.js">	</script>
+    <script src="js/underscore.js">	</script>
+    <link rel="stylesheet" href="css/tsss-a.css">
+    <link rel="stylesheet" href="css/xsss.a.css" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <style>
+        body {
+            font-size: 100px;
+        }
+    </style>
+
+</head>
+<!-- 导航栏开始 -->
+<!-- ———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————— -->
+<body>
+    <div class="qouse" id="qouse">
+        <a href=""><img src="http://y.gtimg.cn/mediastyle/mod/mobile/img/logo_ch.svg?max_age=2592000%22"></a>
+        <a href="#" class="aouse-a">下载app</a>
+        <ul class="aouse-b">
+            <a
+                href="http://172.16.59.13:8020/qq%E9%9F%B3%E4%B9%90%E7%A7%BB%E5%8A%A8%E7%AB%AF/qq%E9%9F%B3%E4%B9%90.html?__hbt=1558443731221">
+                <li>推荐</li>
+            </a>
+            <a
+                href="http://172.16.59.13:8020/qq%E9%9F%B3%E4%B9%90%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%8E%92%E8%A1%8C%E6%A6%9C.html?__hbt=1558443506740">
+                <li>排行榜</li>
+            </a>
+            <a
+                href="http://172.16.59.13:8020/qq%E9%9F%B3%E4%B9%90%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%90%9C%E7%B4%A2.html?__hbt=1558510420720">
+                <li>搜索</li>
+            </a>
+        </ul>
+    <!-- 导航栏结束 -->
+    </div>
+    <!-- 目录 -->
+    <div class="wrapper" id="wap">
+    </div>
+    <!-- 目录结束 -->
+</body>
+<!-- —————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————— -->
+</html>
+
+<!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
+<script>
+    // （2）
+    (function (doc, win) {
+        //	alert(123)
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth >= 375) {
+                    docEl.style.fontSize = '100px';
+                } else {
+                    docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
+<script>
+// ajax代码
+// ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+    function ajax(methods, url, sync, fn) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open(methods, url, sync)
+        xmlhttp.send()
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {
+                if (xmlhttp.status == 200) {
+                    //					fn(xmlhttp.responseText)
+                    var data = JSON.parse(xmlhttp.responseText);
+                    fn(data)
+                    console.log(data);
+                }
+            }
+        }
+    }
+    ajax("get", "json/phb.json", true, fl)
+    function fl(data) {
+
+        console.log(data);
+        // console.log(data.data.slider[1].picUrl);
+
+        var st = "";
+        // for(var f=0; f>data.data.topList.length; f++){
+
+        // }
+        for (var w = 0; w < data.data.topList.length; w++) {
+            var w = data.data.topList;
+            console.log(w[0].songList)
+            for (var d = 0; d < w[0].songList.length; d++) {
+                var d = w[0].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[0].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[0].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += d[0].songname
+                st += "--"
+                st += d[0].singername
+                st += "<p>"
+                st += d[1].songname
+                st += "--"
+                st += d[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += d[2].songname
+                st += "--"
+                st += d[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+
+            }
+            for (t = 0; t < w[1].songList.length; t++) {
+                var t = w[1].songList
+                console.log(t)
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[1].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[1].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[2].songList.length; t++) {
+                var t = w[2].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[2].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[2].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            
+            for (t = 0; t < w[3].songList.length; t++) {
+                var t = w[3].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[3].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[3].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[4].songList.length; t++) {
+                var t = w[4].songList
+
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[4].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[4].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[5].songList.length; t++) {
+                var t = w[5].songList
+
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[5].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[5].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[6].songList.length; t++) {
+                var t = w[6].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[6].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[6].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[7].songList.length; t++) {
+                var t = w[7].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[7].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[7].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[8].songList.length; t++) {
+                var t = w[8].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[8].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[8].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[9].songList.length; t++) {
+                var t = w[9].songList
+
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[9].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[9].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[10].songList.length; t++) {
+                var t = w[10].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[10].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[10].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[11].songList.length; t++) {
+                var t = w[11].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[11].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[11].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[12].songList.length; t++) {
+                var t = w[12].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[12].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[12].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[13].songList.length; t++) {
+                var t = w[13].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[13].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[13].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[14].songList.length; t++) {
+                var t = w[14].songList
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[14].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[14].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[15].songList.length; t++) {
+                var t = w[15].songList
+
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[15].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[15].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+            for (t = 0; t < w[16].songList.length; t++) {
+                var t = w[16].songList
+
+                st += "<ul class='ulse-a'>"
+                st += "<li>"
+                st += "<img src=" + w[16].picUrl + ">"
+                st += "</li>"
+                st += "<li>"
+                st += "<a href='#'>"
+                st += w[16].topTitle
+                st += "</a>"
+                st += "<p>"
+                st += t[0].songname
+                st += "--"
+                st += t[0].singername
+                st += "<p>"
+                st += t[1].songname
+                st += "--"
+                st += t[1].singername
+                st += "</p>"
+                st += "<p>"
+                st += t[2].songname
+                st += "--"
+                st += t[2].singername
+                st += "</p>"
+                st += "</li>"
+                st += "</ul>"
+            }
+        }
+
+        document.getElementById("wap").innerHTML += st;
+    }
+// ajax代码结束
+// <!-- —————————————————————————————————————————————————————————————————————————————————————————————————— -->
+</script>
