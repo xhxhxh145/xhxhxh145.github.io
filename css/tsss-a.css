@@ -1,0 +1,44 @@
+/*设置文件编码*/
+@charset "UTF-8";
+/*css初始化*/
+html, body, ul, li, ol, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {margin: 0;padding: 0;}
+/*去掉蓝色边框,各个浏览器显示效果不同*/
+fieldset, img, input, button {border: none;padding: 0;margin: 0;outline-style: none;}
+ul, ol {list-style: none;}
+input {padding-top: 0;padding-bottom: 0;font-family: "SimSun","宋体";}
+	/*simsun字体是一款宋体设计字体*/
+select, input {vertical-align: middle;}
+img {border: 0;vertical-align: middle;}
+select, input, textarea {font-size: 12px;margin: 0;}
+/*防止拖动影响布局*/
+textarea {resize: none;}
+/*设定表格的细边框样式*/
+table {border-collapse: collapse;}
+body {font: 12px/1.5 "hiragino sans gb",arial;;color: #666;background: #fff;}
+	/*\5b8b\4f53是宋体两个字的unicode编码;
+	unicode编码可以描述所有国家的字符，以\起始，
+	后面跟4位十六进制数*/
+/*清除浮动*/
+.clearfix:before, .clearfix:after {content: "";display: table;/*等价于display:block;*/}
+.clearfix:after {clear: both;}
+/*针对于IE/6/7浏览器的浮动清除*/
+.clearfix {*zoom:1;}
+a {color: #666;text-decoration: none;}
+	a:hover {color: #C81623;}
+	/*设置字体属性为默认大小，是相当于浏览器默认字体
+	大小或继承body设定的字体大小来说的*/
+	
+h1, h2, h3, h4, h5, h6 {text-decoration: none;font-weight: normal;font-size: 100%;}
+s, i, em {font-style: normal;text-decoration: none;}
+/*京东色*/
+.col-red {color: #C81623 !important;}
+/*公共类*/
+.w {width: 100%; margin: 0 auto;}
+.g{width: 1920px; margin: 0 auto;}
+.fl {float: left;}
+.fr {float: right;}
+.al {text-align: left;}	
+.ac {text-align: center;}
+.ar {text-align: right;}
+.hide {display: none;}
+.f{ width: 100% ;}

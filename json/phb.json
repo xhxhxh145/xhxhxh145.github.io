@@ -1,0 +1,367 @@
+{
+    "code": 0,
+    "subcode": 0,
+    "message": "",
+    "default": 0,
+    "data": {
+        "topList": [
+            {
+                "id": 4,
+                "listenCount": 19900000,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000003pN5OZ2qK86g.jpg",
+                "songList": [
+                    {
+                        "singername": "方雅贤",
+                        "songname": "遇到"
+                    },
+                    {
+                        "singername": "刘宪华 (Henry)",
+                        "songname": "当你孤单你会想起谁"
+                    },
+                    {
+                        "singername": "俞彬/代少冬/周兆渊/赵泽帆/李鑫一",
+                        "songname": "你，好不好？ (Live)"
+                    }
+                ],
+                "topTitle": "巅峰榜·流行指数",
+                "type": 0
+            },
+            {
+                "id": 26,
+                "listenCount": 19700000,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000000WgwH50KZhAO.jpg",
+                "songList": [
+                    {
+                        "singername": "陈雪凝",
+                        "songname": "灰姑娘"
+                    },
+                    {
+                        "singername": "陈雪凝",
+                        "songname": "绿色"
+                    },
+                    {
+                        "singername": "张敬轩",
+                        "songname": "只是太爱你"
+                    }
+                ],
+                "topTitle": "巅峰榜·热歌",
+                "type": 0
+            },
+            {
+                "id": 27,
+                "listenCount": 3790420,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000002uBcdm3k01RB.jpg",
+                "songList": [
+                    {
+                        "singername": "陈雪凝",
+                        "songname": "灰姑娘"
+                    },
+                    {
+                        "singername": "胡夏",
+                        "songname": "我只喜欢你"
+                    },
+                    {
+                        "singername": "Taylor Swift/Brendon Urie",
+                        "songname": "ME! (feat. Brendon Urie of Panic! At The Disco)"
+                    }
+                ],
+                "topTitle": "巅峰榜·新歌",
+                "type": 0
+            },
+            {
+                "id": 58,
+                "listenCount": 7172540,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000001psZl51gFS69.jpg",
+                "songList": [
+                    {
+                        "singername": "吴亦凡",
+                        "songname": "大碗宽面"
+                    },
+                    {
+                        "singername": "Papi酱/tang",
+                        "songname": "我妈爱Say No"
+                    },
+                    {
+                        "singername": "MC HotDog",
+                        "songname": "Do You Remember"
+                    }
+                ],
+                "topTitle": "说唱榜",
+                "type": 0
+            },
+            {
+                "id": 57,
+                "listenCount": 4245720,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M0000043jwU30QA0M7.jpg",
+                "songList": [
+                    {
+                        "singername": "Avicii/Agnes/Vargas & Lagola",
+                        "songname": "Tough Love"
+                    },
+                    {
+                        "singername": "Alan Walker/Sabrina Carpenter/Farruko",
+                        "songname": "On My Way"
+                    },
+                    {
+                        "singername": "The Chainsmokers/Ty Dolla $ign/Bülow",
+                        "songname": "Do You Mean"
+                    }
+                ],
+                "topTitle": "电音榜",
+                "type": 0
+            },
+            {
+                "id": 28,
+                "listenCount": 9500000,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000000GUi8B4fYD9N.jpg",
+                "songList": [
+                    {
+                        "singername": "王琪",
+                        "songname": "万爱千恩"
+                    },
+                    {
+                        "singername": "贺一航",
+                        "songname": "别爱太满别睡太晚"
+                    },
+                    {
+                        "singername": "安筱冷",
+                        "songname": "Sexy lady (Original Mix)"
+                    }
+                ],
+                "topTitle": "巅峰榜·网络歌曲",
+                "type": 0
+            },
+            {
+                "id": 5,
+                "listenCount": 8284940,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M00000445zsj0ru3qH.jpg",
+                "songList": [
+                    {
+                        "singername": "陈雪凝",
+                        "songname": "灰姑娘"
+                    },
+                    {
+                        "singername": "胡夏",
+                        "songname": "我只喜欢你"
+                    },
+                    {
+                        "singername": "毛不易",
+                        "songname": "逆风"
+                    }
+                ],
+                "topTitle": "巅峰榜·内地",
+                "type": 0
+            },
+            {
+                "id": 3,
+                "listenCount": 9300000,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000000diuS24FYFs0.jpg",
+                "songList": [
+                    {
+                        "singername": "Taylor Swift/Brendon Urie",
+                        "songname": "ME! (feat. Brendon Urie of Panic! At The Disco)"
+                    },
+                    {
+                        "singername": "Shawn Mendes",
+                        "songname": "If I Can't Have You"
+                    },
+                    {
+                        "singername": "Ed Sheeran/Justin Bieber",
+                        "songname": "I Don't Care"
+                    }
+                ],
+                "topTitle": "巅峰榜·欧美",
+                "type": 0
+            },
+            {
+                "id": 59,
+                "listenCount": 2447340,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000004DqlZP07ZOsF.jpg",
+                "songList": [
+                    {
+                        "singername": "许靖韵",
+                        "songname": "原来我们都一样"
+                    },
+                    {
+                        "singername": "G.E.M. 邓紫棋/王嘉尔",
+                        "songname": "热爱就一起"
+                    },
+                    {
+                        "singername": "古巨基",
+                        "songname": "心中的巨人"
+                    }
+                ],
+                "topTitle": "香港地区榜",
+                "type": 0
+            },
+            {
+                "id": 16,
+                "listenCount": 4448380,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000001u1ALu1aYKxR.jpg",
+                "songList": [
+                    {
+                        "singername": "규현 (圭贤)",
+                        "songname": "Time with you (그게 좋은거야)"
+                    },
+                    {
+                        "singername": "박봄 (朴春)/휘인 (辉人)",
+                        "songname": "4시 44분"
+                    },
+                    {
+                        "singername": "WINNER (위너)",
+                        "songname": "AH YEAH (아예)"
+                    }
+                ],
+                "topTitle": "巅峰榜·韩国",
+                "type": 0
+            },
+            {
+                "id": 60,
+                "listenCount": 19100000,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000004UjT611guPe2.jpg",
+                "songList": [
+                    {
+                        "singername": "贺一航",
+                        "songname": "别爱太满别睡太晚"
+                    },
+                    {
+                        "singername": "李俊佑/小潘潘",
+                        "songname": "宠坏"
+                    },
+                    {
+                        "singername": "大壮",
+                        "songname": "伪装"
+                    }
+                ],
+                "topTitle": "抖音排行榜",
+                "type": 0
+            },
+            {
+                "id": 29,
+                "listenCount": 2249540,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000000yoxGb3ifPjO.jpg",
+                "songList": [
+                    {
+                        "singername": "鞠婧祎",
+                        "songname": "青城山下白素贞"
+                    },
+                    {
+                        "singername": "李俊毅",
+                        "songname": "两人份美好"
+                    },
+                    {
+                        "singername": "余昭源/叶里",
+                        "songname": "初见"
+                    }
+                ],
+                "topTitle": "巅峰榜·影视金曲",
+                "type": 0
+            },
+            {
+                "id": 17,
+                "listenCount": 1961760,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000003DFlFL1Ca7nf.jpg",
+                "songList": [
+                    {
+                        "singername": "Superfly (スーパーフライ)",
+                        "songname": "Ambitious"
+                    },
+                    {
+                        "singername": "[Alexandros]",
+                        "songname": "Pray"
+                    },
+                    {
+                        "singername": "リリィ、さよなら。 (莉莉萨友呐乐)",
+                        "songname": "Clover (naked version)"
+                    }
+                ],
+                "topTitle": "巅峰榜·日本",
+                "type": 0
+            },
+            {
+                "id": 201,
+                "listenCount": 281481,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M0000018DShv2meCVM.jpg",
+                "songList": [
+                    {
+                        "singername": "鹿晗",
+                        "songname": "体会（Nature）"
+                    },
+                    {
+                        "singername": "火箭少女101孟美岐",
+                        "songname": "犟"
+                    },
+                    {
+                        "singername": "蔡徐坤",
+                        "songname": "Hard To Get"
+                    }
+                ],
+                "topTitle": "巅峰榜·MV",
+                "type": 0
+            },
+            {
+                "id": 52,
+                "listenCount": 781305,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000004FEw3S1xsRjf.jpg",
+                "songList": [
+                    {
+                        "singername": "赵政豪",
+                        "songname": "船帆"
+                    },
+                    {
+                        "singername": "刘晓盈",
+                        "songname": "10000"
+                    },
+                    {
+                        "singername": "简弘亦",
+                        "songname": "半夏"
+                    }
+                ],
+                "topTitle": "巅峰榜·腾讯音乐人原创榜",
+                "type": 0
+            },
+            {
+                "id": 36,
+                "listenCount": 2446000,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000000BaxMk4FhI1P.jpg",
+                "songList": [
+                    {
+                        "singername": "K.D",
+                        "songname": "心如止水 (Live)"
+                    },
+                    {
+                        "singername": "麓七",
+                        "songname": "你的酒馆对我打了烊"
+                    },
+                    {
+                        "singername": "尹东星",
+                        "songname": "Me！"
+                    }
+                ],
+                "topTitle": "巅峰榜·K歌金曲",
+                "type": 0
+            },
+            {
+                "id": 61,
+                "listenCount": 956935,
+                "picUrl": "http://y.gtimg.cn/music/photo_new/T003R300x300M000002fiTU501US9b.jpg",
+                "songList": [
+                    {
+                        "singername": "五月天",
+                        "songname": "纯真 #MaydayBlue20th"
+                    },
+                    {
+                        "singername": "吴青峰",
+                        "songname": "歌颂者"
+                    },
+                    {
+                        "singername": "MC HotDog",
+                        "songname": "Do You Remember"
+                    }
+                ],
+                "topTitle": "台湾地区榜",
+                "type": 0
+            }
+        ]
+    }
+}

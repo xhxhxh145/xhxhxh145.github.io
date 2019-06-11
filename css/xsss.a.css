@@ -1,0 +1,196 @@
+.qouse{
+	width: 100%;
+	    height: 1.7rem;
+	background: #ffffff;
+	overflow: hidden;
+}
+.qouse a img{
+	    width: 41%;
+    height: 0.5rem;
+       margin: -61px 0px 0px 8px;
+}
+.qouse .aouse-a{
+	/* font-size:50px;s */
+	float: right;
+margin: 22px 5px 0px 0px;
+	    width: 40%;
+	height: 0.5rem;
+	
+	color: black;
+	    border: solid 1px rgba(0,0,0,.3);
+	border-radius: 25px;
+		text-align: center;
+		    font-size: 0.2rem;
+	line-height:0.53rem;
+	
+}
+
+.qouse .aouse-b{
+	width: 100%;
+    height: 0.5rem;
+    /* background: black; */
+	font-size: 0.3rem;
+	overflow: hidden;
+	background: black;
+		margin: -32.5px 0px 0px 0px;
+		border-bottom:3px solid #4dca8e;
+}
+.qouse .aouse-b li{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	    color: rgba(0,0,0,.6);
+	    line-height: 0.5rem;
+	font-size:0.2rem;
+		overflow: hidden;
+		background: #fcfcfc;
+}
+.swiper-container{
+	width: 100%;
+}
+.swiper-wrapper{
+	width: 100%;
+}
+.swiper-wrapper .swiper-slide{
+	height: 2rem;
+} 
+.swiper-wrapper .swiper-slide img{
+	width: 100%;
+	height: 100%;
+}
+ .swiper-pagination span{
+	background: #ffffff;
+}
+.bn{
+	color: #ffffff;	
+}
+#wap{
+	width:100%;
+	height: 10rem;
+	    font-size: 0.15rem;
+	/* background: red; */
+}
+#wap .wocus{
+	width: 100%;
+	height: 3rem;
+	background: blue;
+	font-size: 0.15rem;
+}
+#wap .wocus .alos{
+	font-size: 0.2rem;
+	line-height: 46px;
+	background: #ffffff;
+	display: block;
+	color: black;
+}
+#wap .wocus .Tousel{
+	width: 100%;
+	height: 2.3rem;
+	background: #f4f4f4;
+	    display: flex;
+}
+#wap .wocus .Tousel li{
+	width: 40%;
+	height: 2rem;
+	background: #ffffff;
+	margin: 0px 0px 0px 29px;
+}
+#wap .wocus .Tousel li a{ 
+	width: 100%;
+	height: 1.5rem;
+	background: green;
+	display: block;
+}
+#wap .wocus .Tousel li a img{ 
+	width: 100%;
+	height: 1.5rem;
+}
+#wap .wocus .Tousel li p{
+	width: 100%;
+	height: 0.5rem;
+	/* background: pink; */
+	    margin: 5px 0px 0px 8px;
+    color: black;
+}
+/* 排行榜 */
+.ulse-a{
+	font-size: 0.2rem;
+	width: 100%;
+	height: 1.5rem;
+	/* background:green; */
+	display: flex;
+	overflow: hidden;
+}
+.ulse-a li{
+	width: 45%;
+	height: 1.2rem;
+	background: #f4f4f4;
+	margin: 9px 0px 0px 12px;
+	font-size: 0.2rem;
+	color: black;
+
+}
+.ulse-a li a{
+	color: black;
+}
+.ulse-a li p{
+	font-size: 0.11rem;
+}
+.ulse-a li img{
+	    width: 63%;
+    height: 1.2rem;
+	    display: block;
+}
+/* 搜索 */
+
+#wap .fouse-a{
+	width: 100%;
+	height: 0.5rem;
+	background: #f4f4f4;
+	overflow: hidden;
+}
+#wap .fouse-a input{
+	width: 70%;
+	height: 0.4rem;
+	color: #666;
+	margin: 4px 0px 0px 13px;
+	font-size: 0.15px;
+	font: 12px/1.5 "hiragino sans gb",arial;
+} 
+#wap .fouse-a a{
+	width: 25%;
+    height: 1.4rem;
+    text-align: center;
+    margin: 0px 0px 0px 40px;
+}
+#wap .fouse-b{
+	width: 80%;
+	height: 2rem;
+	/* background: green; */
+	line-height: 27px;
+	margin: 15px auto;
+	overflow: hidden;
+}
+#wap .fouse-b a{
+	border:solid #ccc 1px;
+	border-radius: 10%;
+	color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

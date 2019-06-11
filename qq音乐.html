@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<title> </title>
+	<script src="js/JQ.js">	</script>
+	<script src="js/underscore.js">	</script>
+	<link rel="stylesheet" href="css/tsss-a.css">
+	<link rel="stylesheet" href="css/xsss.a.css" />
+	<link rel="stylesheet" href="css/swiper.css">
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<style>
+		body {
+			font-size: 100px;
+		}
+	</style>
+
+</head>
+<!-- ———————————————————————————————————————————————————————————————————————————————————————————————————— -->
+<body>
+	<!-- 导航栏开始 -->
+	<div class="qouse" id="qouse">
+		<a href=""><img src="http://y.gtimg.cn/mediastyle/mod/mobile/img/logo_ch.svg?max_age=2592000%22"></a>
+		<a href="#" class="aouse-a">下载app</a>
+		<ul class="aouse-b">
+			<a
+				href="http://172.16.59.13:8020/qq%E9%9F%B3%E4%B9%90%E7%A7%BB%E5%8A%A8%E7%AB%AF/qq%E9%9F%B3%E4%B9%90.html?__hbt=1558443731221">
+				<li>推荐</li>
+			</a>
+			<a
+				href="http://172.16.59.13:8020/qq%E9%9F%B3%E4%B9%90%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%8E%92%E8%A1%8C%E6%A6%9C.html?__hbt=1558443506740">
+				<li>排行榜</li>
+			</a>
+			<a
+				href="http://172.16.59.13:8020/qq%E9%9F%B3%E4%B9%90%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%90%9C%E7%B4%A2.html?__hbt=1558510420720">
+				<li>搜索</li>
+			</a>
+		</ul>
+		<!-- 导航栏结束 -->
+	</div>
+	<!-- 轮播图开始 -->
+	<!-- —————————————————————————————————————————————————————————————————————————————————————————————————————————————— -->
+	<div class="swiper-container" id="sc">
+		<div class="swiper-wrapper" id="sw">
+			<div class="swiper-slide"><img src="http://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1296498.jpg" alt="">
+			</div>
+			<div class="swiper-slide"><img src="http://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1297781.jpg"></div>
+			<div class="swiper-slide"><img src="http://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1297967.jpg" alt="">
+			</div>
+			<div class="swiper-slide"><img src="http://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1288606.jpg" alt="">
+			</div>
+			<div class="swiper-slide"><img src="http://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/1295494.jpg" alt="">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-next bn" id="btn1"></div>
+		<div class="swiper-button-prev bn" id="btn2"></div>
+ <!-- 轮播图结束 -->
+	</div>
+	<!-- qq音乐目录 -->
+	<div class="wrapper" id="wap">
+	</div>
+	<!-- qq音乐目录结束 -->
+	<!-- ———————————————————————————————————————————————————————————————————————————————————————————————————————————— -->
+</body>
+</html>
+<script>
+	// ——————————————————————————————————————————————————————————————————————————————————————————————————
+	// （1）
+	(function (doc, win) {
+		//	alert(123)
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				if (clientWidth >= 375) {
+					docEl.style.fontSize = '100px';
+				} else {
+					docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+				}
+			};
+
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+// ——————————————————————————————————————————————————————————————————————————————————————————————————————
+</script>
+<script>
+// ajax获取
+// ————————————————————————————————————————————————————————————————————————————————————
+	function ajax(methods, url, sync, fn) {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open(methods, url, sync)
+		xmlhttp.send()
+		xmlhttp.onreadystatechange = function () {
+			if (xmlhttp.readyState == 4) {
+				if (xmlhttp.status == 200) {
+					//					fn(xmlhttp.responseText)
+					var data = JSON.parse(xmlhttp.responseText);
+					fn(data)
+					console.log(data);
+				}
+			}
+		}
+	}
+	ajax("get", "json/tuijian.json", true, fl)
+	function fl(data) {
+
+		console.log(data);
+		console.log(data.data.slider[1].picUrl);
+
+		var st = "";
+		st += "<div class='wocus'>";
+		st += "<a href='#' class='alos'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+		st += "电台";
+		st += "</a>";
+		st += "<ul class='Tousel'>"
+		st += "<li>"
+		st += "<a href='#'>"
+		// console.log(data.data.radioList.length)
+		for (var i = 0; i < data.data.radioList.length; i++) {
+			var i = data.data.radioList
+			console.log(i)
+			console.log(data.data.radioList)
+			st += "<img src=" + i[0].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += i[0].Ftitle
+			st += "</p>"
+			st += "</li>"
+			st += "<li>"
+			st += "<a href='#'>"
+			st += "<img src=" + i[1].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += i[1].Ftitle
+			st += "</p>"
+			st += "</li>"
+		}
+		st += "</ul>"
+		st += "<a href='#' class='alos'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+		st += "热门电视";
+		st += "</a>";
+		st += "<ul class='Tousel'>"
+		st += "<li>"
+		st += "<a href='#'>"
+		for (var k = 0; k < data.data.songList.length; k++) {
+			var k = data.data.songList;
+			console.log(k)
+			st += "<img src=" + k[0].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += k[0].songListDesc
+			st += "</p>"
+			st += "</li>"
+			st += "<li>"
+			st += "<a href='#'>"
+			st += "<img src=" + k[1].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += k[1].songListDesc
+			st += "</p>"
+			st += "</li>"
+
+			st += "</ul>"
+			st += "<ul class='Tousel'>"
+			st += "<li>"
+			st += "<a href='#'>"
+			st += "<img src=" + k[1].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += k[1].songListDesc
+			st += "</p>"
+			st += "</li>"
+			st += "<li>"
+			st += "<a href='#'>"
+			st += "<img src=" + k[2].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += k[2].songListDesc
+			st += "</p>"
+			st += "</li>"
+
+			st += "</ul>"
+			st += "<ul class='Tousel'>"
+			st += "<li>"
+			st += "<a href='#'>"
+			st += "<img src=" + k[3].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += k[3].songListDesc
+			st += "</p>"
+			st += "</li>"
+			st += "<li>"
+			st += "<a href='#'>"
+			st += "<img src=" + k[4].picUrl + ">"
+			st += "</a>"
+			st += "<p>"
+			st += k[4].songListDesc
+			st += "</p>"
+			st += "</li>"
+			st += "</ul>"
+			st += "</div>"
+		}
+
+		document.getElementById("wap").innerHTML += st;
+	}
+	// ——————————————————————————————————————————————————————————————————————
+// 结束
+</script>
+<script>
+	// 轮播图开始
+	// ————————————————————————————————————————————————————————————————————————————————
+	var sc = document.getElementById("sc")
+	var mySwiper = new Swiper('.swiper-container', {
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar',
+			clickable: true,
+		},
+		// 导航按钮
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		//自动轮播
+		autoplay: true,
+		autoplay: {
+			// delay: 10000,//时间 毫秒
+			disableOnInteraction: false,//用户操作之后是否停止自动轮播默认true 
+		},
+		autoplay: 1000,
+		autoplayDisableOnInteraction: false,
+		// disableOnInteraction: false,
+		loop: true,//循环 最后面一个往后面滑动会滑到第一个
+		pagination: '.swiper-pagination',
+	});
+
+	$('#btn1').click(function () {
+		mySwiper.slideNext();
+	})
+	$('#btn2').click(function () {
+		mySwiper.slidePrev();
+	})
+	// ——————————————————————————————————————————————————————————————————————————————————————
+	// 轮播图结束
+</script>
